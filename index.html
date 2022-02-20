@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Restaurant</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css">
+    </head>
+    <body>
+        <div id="split">
+            <div id="left">
+                <h2>Tables</h2>
+                <input type="text" id="table_input" onkeyup="searchTable()" placeholder="Search table">
+                <ol id="tables">
+                    <li class="trigger">
+                        <div>
+                            <h3 ondrop="drop(event)" ondragover="allowDrop(event)">Table-1</h3>
+                            <p>Rs. 0 | Total Items: 0</p>
+                        </div>
+                    </li>
+                    <li class="trigger">
+                        <div>
+                            <h3 ondrop="drop(event)" ondragover="allowDrop(event)">Table-2</h3>
+                            <p>Rs. 0 | Total Items: 0</p>
+                        </div>
+                    </li>
+                    <li class="trigger">
+                        <div>
+                            <h3 ondrop="drop(event)" ondragover="allowDrop(event)">Table-3</h3>
+                            <p>Rs. 0 | Total Items: 0</p>
+                        </div>
+                    </li>
+                </ol>
+            </div>
+            <div class="modal">
+                <div class="modal-content">
+                    <header>
+                        <h3><span id="bill_heading">Table-Name | Order Details</span> <span class="close-button">&times;</span></h3>
+                    </header>
+                    <section>
+                        <table id="table_bill">
+                        </table>
+                    </section>
+                    <footer>
+                        <div>CLOSE SESSION (GENERATE BILL)</div>
+                    </footer>
+                </div>
+            </div>
+            <div id="right">
+                <h2>Menu</h2>
+                <input type="text" id="food_input" onkeyup="searchMenu()" placeholder="Search menu.. by course, by food">
+                <ul id="menu_items">
+                </ul>
+            </div>
+        </div>
+        <script src="scripts/billManipulation.js"></script>
+        <script src="scripts/load.js"></script>
+        <script src="scripts/searchFilter.js"></script>
+    </body>
+</html>
