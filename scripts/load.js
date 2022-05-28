@@ -1,5 +1,5 @@
 function loadMenuFromAPI() {
-    let promise = fetch('https://jsonblob.com/api/jsonBlob/943121324776374272').then(
+    let promise = fetch('https://jsonblob.com/api/jsonBlob/980105242838581248').then(
         function(response) {
             return response.text();
         }).then(function(text) {
